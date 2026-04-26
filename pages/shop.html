@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse all products on YSFCart — shoes, accessories, toys, beauty, and more.">
+    <title>Shop — YSFCart</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/mediaquery.css">
+    <style>
+        .shop-layout {
+            display: flex;
+            gap: 30px;
+            padding: 40px;
+            align-items: flex-start;
+        }
+        .shop-sidebar {
+            flex: 0 0 220px;
+            background: #fff;
+            border-radius: 10px;
+            padding: 24px 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+            position: sticky;
+            top: 20px;
+        }
+        .shop-sidebar h3 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--light);
+            margin-bottom: 14px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--primary);
+        }
+        .shop-sidebar ul {
+            list-style: none;
+        }
+        .shop-sidebar ul li {
+            margin: 8px 0;
+        }
+        .shop-sidebar ul li a {
+            color: #555;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 8px;
+            border-radius: 5px;
+            transition: all 0.2s;
+            text-decoration: none;
+        }
+        .shop-sidebar ul li a:hover,
+        .shop-sidebar ul li a.active {
+            background: rgba(92,156,205,0.1);
+            color: var(--primary);
+        }
+        .shop-sidebar ul li a i {
+            color: var(--primary);
+            width: 16px;
+            text-align: center;
+        }
+        .shop-main { flex: 1; }
+        .shop-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .shop-header h2 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--light);
+        }
+        .shop-header select {
+            padding: 8px 14px;
+            border: 1.5px solid #ddd;
+            border-radius: 6px;
+            font-size: 0.88rem;
+            font-family: inherit;
+            outline: none;
+            cursor: pointer;
+            color: #444;
+        }
+        .shop-search {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 28px;
+        }
+        .shop-search input {
+            flex: 1;
+            padding: 10px 16px;
+            border: 1.5px solid #ddd;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-family: inherit;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+        .shop-search input:focus { border-color: var(--primary); }
+        .shop-search button {
+            padding: 10px 20px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: background 0.3s;
+        }
+        .shop-search button:hover { background: var(--primary-dark); }
+        @media (max-width: 768px) {
+            .shop-layout { flex-direction: column; padding: 20px; }
+            .shop-sidebar { position: static; width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ===== TOPBAR ===== -->
+<nav class="nav1">
+    <div class="left">
+        <span>Welcome to YSFCart</span>
+        <a href="register.html">Register</a> OR
+        <a href="login.html">Login</a>
+    </div>
+    <div class="right">
+        <i class="fa fa-facebook"></i>
+        <i class="fa fa-instagram"></i>
+        <i class="fa fa-whatsapp"></i>
+        <i class="fa fa-twitter"></i>
+        <i class="fa fa-pinterest"></i>
+    </div>
+</nav>
+
+<!-- ===== BRAND BAR ===== -->
+<nav class="nav2">
+    <div class="nav2-left">
+        <i class="fa fa-phone"></i> +91 101 189 035
+        &nbsp;&nbsp;<i class="fa fa-envelope"></i> ecmrs098@ecom.ac.in
+    </div>
+    <div class="nav2-center">
+        <a href="../index.html">
+            <h1>YSF<span>Cart</span></h1>
+        </a>
+        <p>Everything for New World</p>
+    </div>
+    <div class="nav2-right">
+        <a href="contact.html"><i class="fa fa-map"></i> Contact Us</a>
+        &nbsp;&nbsp;
+        <a href="cart.html" style="position:relative;">
+            <i class="fa fa-shopping-cart"></i> Cart
+            <span id="cart-count" style="display:none;position:absolute;top:-8px;right:-10px;background:red;color:#fff;border-radius:50%;width:18px;height:18px;font-size:0.7rem;line-height:18px;text-align:center;font-weight:700;"></span>
+        </a>
+    </div>
+</nav>
+
+<!-- ===== MAIN NAV ===== -->
+<nav class="nav3">
+    <ul>
+        <li><a href="../index.html"><i class="fa fa-home"></i> Home</a></li>
+        <li><a href="shop.html?cat=boy"><i class="fa fa-male"></i> Boy</a></li>
+        <li><a href="shop.html?cat=accessories"><i class="fa fa-star"></i> Accessories</a></li>
+        <li>
+            <a href="shop.html?cat=toys"><i class="fa fa-anchor"></i> Toys <i class="fa fa-caret-down"></i></a>
+            <ul>
+                <li><a href="shop.html?cat=wooden"><i class="fa fa-clipboard"></i> Wooden</a></li>
+                <li><a href="shop.html?cat=plastic"><i class="fa fa-circle-o"></i> Plastic</a></li>
+                <li><a href="shop.html?cat=mattel"><i class="fa fa-gavel"></i> Mattel</a></li>
+            </ul>
+        </li>
+        <li><a href="shop.html?cat=special"><i class="fa fa-calendar-check-o"></i> Special</a></li>
+        <li><a href="shop.html" class="active"><i class="fa fa-search"></i> All Products</a></li>
+    </ul>
+</nav>
+
+<i class="fa fa-bars" id="menubar"></i>
+<div id="sidenav-overlay"></div>
+<section id="sidenav">
+    <ul>
+        <li><a href="../index.html"><i class="fa fa-home"></i> Home</a></li>
+        <li><a href="shop.html"><i class="fa fa-search"></i> All Products</a></li>
+        <li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+        <li><a href="contact.html"><i class="fa fa-map"></i> Contact</a></li>
+        <li><a href="login.html"><i class="fa fa-sign-in"></i> Login</a></li>
+        <li><a href="register.html"><i class="fa fa-user-plus"></i> Register</a></li>
+    </ul>
+</section>
+
+<!-- ===== PAGE HERO ===== -->
+<div class="page-hero">
+    <h1><i class="fa fa-shopping-bag"></i> All Products</h1>
+    <p>Browse our full collection — fashion, accessories, toys & more</p>
+</div>
+
+<!-- ===== SHOP LAYOUT ===== -->
+<div class="shop-layout">
+
+    <!-- Sidebar -->
+    <aside class="shop-sidebar">
+        <h3><i class="fa fa-filter"></i> Categories</h3>
+        <ul>
+            <li><a href="shop.html" class="active"><i class="fa fa-th"></i> All Products</a></li>
+            <li><a href="shop.html?cat=boy"><i class="fa fa-male"></i> Boy</a></li>
+            <li><a href="shop.html?cat=accessories"><i class="fa fa-star"></i> Accessories</a></li>
+            <li><a href="shop.html?cat=toys"><i class="fa fa-anchor"></i> Toys</a></li>
+            <li><a href="shop.html?cat=wooden"><i class="fa fa-clipboard"></i> Wooden Toys</a></li>
+            <li><a href="shop.html?cat=plastic"><i class="fa fa-circle-o"></i> Plastic Toys</a></li>
+            <li><a href="shop.html?cat=mattel"><i class="fa fa-gavel"></i> Mattel</a></li>
+            <li><a href="shop.html?cat=special"><i class="fa fa-calendar-check-o"></i> Special</a></li>
+        </ul>
+
+        <h3 style="margin-top:24px;"><i class="fa fa-tag"></i> Price Range</h3>
+        <ul>
+            <li><a href="shop.html?price=0-50"><i class="fa fa-dollar"></i> Under $50</a></li>
+            <li><a href="shop.html?price=50-100"><i class="fa fa-dollar"></i> $50 – $100</a></li>
+            <li><a href="shop.html?price=100-500"><i class="fa fa-dollar"></i> $100 – $500</a></li>
+            <li><a href="shop.html?price=500+"><i class="fa fa-dollar"></i> $500+</a></li>
+        </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="shop-main">
+        <div class="shop-search">
+            <input type="text" id="shop-search-input" placeholder="Search products...">
+            <button onclick="alert('Search coming soon!')"><i class="fa fa-search"></i> Search</button>
+        </div>
+
+        <div class="shop-header">
+            <h2>Showing All Products</h2>
+            <select id="shop-sort">
+                <option value="default">Sort by: Default</option>
+                <option value="price-asc">Price: Low to High</option>
+                <option value="price-desc">Price: High to Low</option>
+                <option value="name-asc">Name: A to Z</option>
+            </select>
+        </div>
+
+        <!-- Product Grid -->
+        <div class="card-container">
+
+            <div class="card">
+                <span class="badge">20% off</span>
+                <div class="card-img">
+                    <img src="../assets/images/s2.jpg" alt="Branded Shoes - Classic White">
+                </div>
+                <h2>Branded Shoes</h2>
+                <p class="card-desc">Classic White Edition</p>
+                <div class="card-stars">
+                    <i class="fa fa-star"></i><i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i><i class="fa fa-star"></i>
+                </div>
+                <p class="card-price">$500.00</p>
+                <button class="btn-cart">Add to Cart</button>
+            </div>
+
+            <div class="card">
+                <span class="badge">20% off</span>
+                <div class="card-img">
+                    <img src="../assets/images/s3.jpg" alt="Branded Shoes - Sport">
+                </div>
+                <h2>Branded Shoes</h2>
+                <p class="card-desc">Sport Edition</p>
+                <div class="card-stars">
+                    <i class="fa fa-star"></i><i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i><i class="fa fa-star"></i>
+                </div>
+                <p class="card-price">$500.00</p>
+                <button class="btn-cart">Add to Cart</button>
+            </div>
+
+            <div class="card">
+                <span class="badge">20% off</span>
+                <div class="card-img">
+                    <img src="../assets/images/s8.jpg" alt="Branded Shoes - Casual">
+                </div>
+                <h2>Branded Shoes</h2>
+                <p class="card-desc">Casual Style</p>
+                <div class="card-stars">
+                    <i class="fa fa-star"></i><i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i><i class="fa fa-star"></i>
+                </div>
+                <p class="card-price">$500.00</p>
+                <button class="btn-cart">Add to Cart</button>
+            </div>
+
+            <div class="card">
+                <span class="badge">20% off</span>
+                <div class="card-img">
+                    <img src="../assets/images/bu1.jpg" alt="Blossom Luxe Headband">
+                </div>
+                <h2>Blossom Luxe Headband</h2>
+                <p class="card-desc">Elegant floral headband</p>
+                <div class="card-stars">
+                    <i class="fa fa-star"></i><i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i><i class="fa fa-star"></i>
+                </div>
+                <p class="card-price">$25.00</p>
+                <button class="btn-cart">Add to Cart</button>
+            </div>
+
+            <div class="card">
+                <span class="badge">20% off</span>
+                <div class="card-img">
+                    <img src="../assets/images/bu2.jpg" alt="Urban Chic Denim Jacket">
+                </div>
+                <h2>Urban Chic Denim Jacket</h2>
+                <p class="card-desc">Stylish everyday denim</p>
+                <div class="card-stars">
+                    <i class="fa fa-star"></i><i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i><i class="fa fa-star"></i>
+                </div>
+                <p class="card-price">$120.00</p>
+                <button class="btn-cart">Add to Cart</button>
+            </div>
+
+            <div class="card">
+                <span class="badge">20% off</span>
+                <div class="card-img">
+                    <img src="../assets/images/bu3.jpg" alt="GlowSoft Hand Cream">
+                </div>
+                <h2>GlowSoft Hand Cream</h2>
+                <p class="card-desc">Nourishing daily moisturizer</p>
+                <div class="card-stars">
+                    <i class="fa fa-star"></i><i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i><i class="fa fa-star"></i>
+                </div>
+                <p class="card-price">$18.00</p>
+                <button class="btn-cart">Add to Cart</button>
+            </div>
+
+            <div class="card">
+                <span class="badge">20% off</span>
+                <div class="card-img">
+                    <img src="../assets/images/bu4.jpg" alt="Glam Essentials Kit">
+                </div>
+                <h2>Glam Essentials Kit</h2>
+                <p class="card-desc">Complete makeup collection</p>
+                <div class="card-stars">
+                    <i class="fa fa-star"></i><i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i><i class="fa fa-star"></i>
+                </div>
+                <p class="card-price">$85.00</p>
+                <button class="btn-cart">Add to Cart</button>
+            </div>
+
+            <div class="card">
+                <span class="badge">20% off</span>
+                <div class="card-img">
+                    <img src="../assets/images/bu8.jpg" alt="Premium Collection">
+                </div>
+                <h2>Premium Collection</h2>
+                <p class="card-desc">Exclusive limited edition</p>
+                <div class="card-stars">
+                    <i class="fa fa-star"></i><i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i><i class="fa fa-star"></i>
+                </div>
+                <p class="card-price">$450.00</p>
+                <button class="btn-cart">Add to Cart</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+    <div class="footer-col">
+        <h2>YSF<span>Cart</span></h2>
+        <p>Everything for New World.</p>
+    </div>
+    <div class="footer-col">
+        <div class="social-icons">
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-whatsapp"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-pinterest"></i>
+        </div>
+        <div class="footer-links">
+            <a href="../index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+        <p style="margin-top:10px;">Designed by Md Yusuf</p>
+    </div>
+    <div class="footer-col">
+        <p><i class="fa fa-phone"></i> +91 101 189 035<br>
+           <i class="fa fa-envelope"></i> ecmrs098@ecom.ac.in</p>
+    </div>
+    <div class="footer-bottom">
+        <p>Copyright &copy; 2024 YSFCart. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

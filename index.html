@@ -3,378 +3,352 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YSFCart</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="mediaquery.css">
+    <meta name="description" content="YSFCart — Your one-stop e-commerce shop for the latest fashion, accessories, toys, and more.">
+    <title>YSFCart — Everything for New World</title>
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Quicksand:wght@300..700&family=Roboto:wght@300&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&family=Roboto&display=swap" rel="stylesheet">
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&family=Poppins:wght@300;400;600&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+    <!-- Site Styles -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/mediaquery.css">
 </head>
 <body>
-    <header>
-        <!-- NAV-1 -->
-        <nav class="nav1">
-            <div class="left">
-                <span>Welcome to E-shop</span>
-                <a href="#">Register</a> OR 
-                <a href="#">Login</a>
-            </div>
-            <div class="right">
-                <i class="fa fa-facebook"></i>
-                <i class="fa fa-instagram"></i>
-                <i class="fa fa-whatsapp"></i>
-                <i class="fa fa-twitter"></i>
-                <i class="fa fa-pinterest"></i>
-            </div>
-        </nav>
-        <!-- NAV-2 -->
-         <nav class="nav2">
-            <div class="nav2-left">
-            <i class="fa fa-phone"></i> +91101189035
-            <i class="fa fa-envelope"></i> ecmrs098.ecom.ac.in
+
+<!-- ===== HEADER ===== -->
+<header>
+
+    <!-- NAV 1 — Topbar -->
+    <nav class="nav1" id="nav1">
+        <div class="left">
+            <span>Welcome to YSFCart</span>
+            <a href="pages/register.html" id="nav-register">Register</a> OR
+            <a href="pages/login.html" id="nav-login">Login</a>
+        </div>
+        <div class="right">
+            <i class="fa fa-facebook" title="Facebook"></i>
+            <i class="fa fa-instagram" title="Instagram"></i>
+            <i class="fa fa-whatsapp" title="WhatsApp"></i>
+            <i class="fa fa-twitter" title="Twitter"></i>
+            <i class="fa fa-pinterest" title="Pinterest"></i>
+        </div>
+    </nav>
+
+    <!-- NAV 2 — Brand Bar -->
+    <nav class="nav2" id="nav2">
+        <div class="nav2-left">
+            <i class="fa fa-phone"></i> +91 101 189 035
+            &nbsp;&nbsp;
+            <i class="fa fa-envelope"></i> ecmrs098@ecom.ac.in
         </div>
         <div class="nav2-center">
-            <h1>YSF<span>Cart</span></h1>
-            <p>Evrything for New World</p>
+            <a href="index.html">
+                <h1>YSF<span>Cart</span></h1>
+            </a>
+            <p>Everything for New World</p>
         </div>
         <div class="nav2-right">
-            <i class="fa fa-map"></i>Contact Us
+            <a href="pages/contact.html" id="nav-contact">
+                <i class="fa fa-map"></i> Contact Us
+            </a>
+            &nbsp;&nbsp;
+            <a href="pages/cart.html" id="nav-cart" style="position:relative;">
+                <i class="fa fa-shopping-cart"></i> Cart
+                <span id="cart-count" style="display:none;position:absolute;top:-8px;right:-10px;background:red;color:#fff;border-radius:50%;width:18px;height:18px;font-size:0.7rem;line-height:18px;text-align:center;font-weight:700;"></span>
+            </a>
         </div>
-         </nav>
-         <!-- NAV-3 -->
-          <nav class="nav3">
-            <ul>
-                <li><a href="#"><i class="fa fa-home"></i>Home</a></li>
-                <li><a href="#"><i class="fa fa-user"></i>Boy</a></li>
-                <li><a href="#"><i class="fa fa-user"></i>Accessories</a></li>
-                <li><a href="#"><i class="fa fa-anchor"></i>Toys <i class="fa fa-caret-down"></i></a>
+    </nav>
+
+    <!-- NAV 3 — Main Menu -->
+    <nav class="nav3" id="nav3">
+        <ul>
+            <li><a href="index.html" id="menu-home"><i class="fa fa-home"></i> Home</a></li>
+            <li><a href="pages/shop.html?cat=boy" id="menu-boy"><i class="fa fa-male"></i> Boy</a></li>
+            <li><a href="pages/shop.html?cat=accessories" id="menu-accessories"><i class="fa fa-star"></i> Accessories</a></li>
+            <li>
+                <a href="pages/shop.html?cat=toys" id="menu-toys">
+                    <i class="fa fa-anchor"></i> Toys <i class="fa fa-caret-down"></i>
+                </a>
                 <ul>
-                    <li><a href="#"><i class="fa fa-clipboard"></i>Wooden</a></li>
-                    <li><a href="#"><i class="fa fa-circle-o"></i>Plastic</a></li>
-                    <li><a href="#"><i class="fa fa-gavel"></i>Mettel</a></li>
+                    <li><a href="pages/shop.html?cat=wooden" id="menu-wooden"><i class="fa fa-clipboard"></i> Wooden</a></li>
+                    <li><a href="pages/shop.html?cat=plastic" id="menu-plastic"><i class="fa fa-circle-o"></i> Plastic</a></li>
+                    <li><a href="pages/shop.html?cat=mattel" id="menu-mattel"><i class="fa fa-gavel"></i> Mattel</a></li>
                 </ul>
-                </li>
-                <li><a href="#"><i class="fa fa-calendar-check-o"></i>Special</a></li>
-                <li><a href="#"><i class="fa fa-search"></i>Find</a></li>
-            </ul>
-          </nav>
+            </li>
+            <li><a href="pages/shop.html?cat=special" id="menu-special"><i class="fa fa-calendar-check-o"></i> Special</a></li>
+            <li><a href="pages/shop.html" id="menu-shop"><i class="fa fa-search"></i> All Products</a></li>
+        </ul>
+    </nav>
 
-          <section id="sidenav">
-            <ul>
-                <li><a href="#"><i class="fa fa-home"></i>Home</a></li>
-                <li><a href="#"><i class="fa fa-user"></i>Boy</a></li>
-                <li><a href="#"><i class="fa fa-user"></i>Accessories</a></li>
-               
-                <li><a href="#"><i class="fa fa-calendar-check-o"></i>Special</a></li>
-                <li><a href="#"><i class="fa fa-search"></i>Find</a></li>
+    <!-- Hamburger (mobile) -->
+    <i class="fa fa-bars" id="menubar" title="Menu"></i>
 
-                <li><a href="#"><i class="fa fa-anchor"></i>Toys <i class="fa fa-caret-down"></i></a>
-                    <ul>
-                        <li><a href="#"><i class="fa fa-clipboard"></i>Wooden</a></li>
-                        <li><a href="#"><i class="fa fa-circle-o"></i>Plastic</a></li>
-                        <li><a href="#"><i class="fa fa-gavel"></i>Mettel</a></li>
-                    </ul>
-                </li>
-            </ul>
-          </section>
-          <i class="fa fa-bars" id="menubar"></i>
-          
-          <!-- FEATURED START -->
-           <section class="featured">
-            <div class="featured-text">
-                <button>Coming Soon</button>
-                <h2>Our new designs</h2>
+    <!-- Sidenav Overlay -->
+    <div id="sidenav-overlay"></div>
+
+    <!-- Mobile Sidenav -->
+    <section id="sidenav">
+        <ul>
+            <li><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
+            <li><a href="pages/shop.html?cat=boy"><i class="fa fa-male"></i> Boy</a></li>
+            <li><a href="pages/shop.html?cat=accessories"><i class="fa fa-star"></i> Accessories</a></li>
+            <li class="has-sub">
+                <a href="#"><i class="fa fa-anchor"></i> Toys <i class="fa fa-caret-down caret"></i></a>
+                <ul class="sub-menu">
+                    <li><a href="pages/shop.html?cat=wooden"><i class="fa fa-clipboard"></i> Wooden</a></li>
+                    <li><a href="pages/shop.html?cat=plastic"><i class="fa fa-circle-o"></i> Plastic</a></li>
+                    <li><a href="pages/shop.html?cat=mattel"><i class="fa fa-gavel"></i> Mattel</a></li>
+                </ul>
+            </li>
+            <li><a href="pages/shop.html?cat=special"><i class="fa fa-calendar-check-o"></i> Special</a></li>
+            <li><a href="pages/shop.html"><i class="fa fa-search"></i> All Products</a></li>
+            <li><a href="pages/cart.html"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+            <li><a href="pages/contact.html"><i class="fa fa-map"></i> Contact</a></li>
+            <li><a href="pages/login.html"><i class="fa fa-sign-in"></i> Login</a></li>
+            <li><a href="pages/register.html"><i class="fa fa-user-plus"></i> Register</a></li>
+        </ul>
+    </section>
+
+    <!-- Hero / Featured -->
+    <section class="featured">
+        <div class="featured-text">
+            <button id="btn-coming-soon">Coming Soon</button>
+            <h2>Our New Designs</h2>
+        </div>
+    </section>
+
+</header>
+
+<!-- ===== NEW ARRIVALS ===== -->
+<section class="latest" id="new-arrivals">
+    <div class="product-intro">
+        <h1>New <span>Arrivals</span></h1>
+        <p>Explore our latest collection, featuring the newest trends and styles just added for you. Be the first to own them!</p>
+    </div>
+
+    <div class="card-container">
+
+        <div class="card">
+            <span class="badge">20% off</span>
+            <div class="card-img">
+                <img src="assets/images/s2.jpg" alt="Branded Shoes - Classic White">
             </div>
-           </section>
-    </header>
-    <br><br>
-    <!-- Latest -->
-     <section class="latest">
-        <div class="product-intro">
-            <h1>New <span>Arrivals</span></h1>
-            <p>Explore our latest collection, featuring the newest trends and styles just added for you. Be the first to own them!</p>
+            <h2>Branded Shoes</h2>
+            <div class="card-stars">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+            </div>
+            <p class="card-price">$500.00</p>
+            <button class="btn-cart">Add to Cart</button>
         </div>
 
-        <!-- CART -->
-        <div class="card-container">
-         <div class="card">
-            <div>
-                <img src="s2.jpg" alt="Card Icon">
+        <div class="card">
+            <span class="badge">20% off</span>
+            <div class="card-img">
+                <img src="assets/images/s3.jpg" alt="Branded Shoes - Sport Edition">
             </div>
-                <h1>Branded Shoes</h1>
-                <span>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                </span>
-                <p>$500.00</p>
-                <button>Add to Cart</button>
-         </div>
-         <div class="card">
-            <div>
-                <img src="s3.jpg" alt="Card Icon">
+            <h2>Branded Shoes</h2>
+            <div class="card-stars">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
             </div>
-                <h1>Branded Shoes</h1>
-                <span>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                </span>
-                <p>$500.00</p>
-                <button>Add to Cart</button>
-         </div>
-         <div class="card">
-            <div>
-                <img src="s8.jpg" alt="Card Icon">
-            </div>
-                <h1>Branded Shoes</h1>
-                <span>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                </span>
-                <p>$500.00</p>
-                <button>Add to Cart</button>
-         </div>
-         <div class="card">
-            <div>
-                <img src="s2.jpg" alt="Card Icon">
-            </div>
-                <h1>Branded Shoes</h1>
-                <span>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                </span>
-                <p>$500.00</p>
-                <button>Add to Cart</button>
-         </div>
+            <p class="card-price">$500.00</p>
+            <button class="btn-cart">Add to Cart</button>
         </div>
 
-        <div class="card-container">
-            <div class="card">
-               <div>
-                   <img src="s2.jpg" alt="Card Icon">
-               </div>
-                   <h1>Branded Shoes</h1>
-                   <span>
-                       <i class="fa fa-star"></i>
-                       <i class="fa fa-star"></i>
-                       <i class="fa fa-star"></i>
-                       <i class="fa fa-star"></i>
-                   </span>
-                   <p>$500.00</p>
-                   <button>Add to Cart</button>
+        <div class="card">
+            <span class="badge">20% off</span>
+            <div class="card-img">
+                <img src="assets/images/s8.jpg" alt="Branded Shoes - Casual">
             </div>
-            <div class="card">
-               <div>
-                   <img src="s3.jpg" alt="Card Icon">
-               </div>
-                   <h1>Branded Shoes</h1>
-                   <span>
-                       <i class="fa fa-star"></i>
-                       <i class="fa fa-star"></i>
-                       <i class="fa fa-star"></i>
-                       <i class="fa fa-star"></i>
-                   </span>
-                   <p>$500.00</p>
-                   <button>Add to Cart</button>
+            <h2>Branded Shoes</h2>
+            <div class="card-stars">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
             </div>
-            <div class="card">
-               <div>
-                   <img src="s8.jpg" alt="Card Icon">
-               </div>
-                   <h1>Branded Shoes</h1>
-                   <span>
-                       <i class="fa fa-star"></i>
-                       <i class="fa fa-star"></i>
-                       <i class="fa fa-star"></i>
-                       <i class="fa fa-star"></i>
-                   </span>
-                   <p>$500.00</p>
-                   <button>Add to Cart</button>
-            </div>
-            <div class="card">
-               <div>
-                   <img src="s2.jpg" alt="Card Icon">
-               </div>
-                   <h1>Branded Shoes</h1>
-                   <span>
-                       <i class="fa fa-star"></i>
-                       <i class="fa fa-star"></i>
-                       <i class="fa fa-star"></i>
-                       <i class="fa fa-star"></i>
-                   </span>
-                   <p>$500.00</p>
-                   <button>Add to Cart</button>
-            </div>
-           </div>
-     </section>
-
-     <!-- Popular Products -->
-
-     <section class="latest">
-        <div class="product-intro">
-            <h1>Popular <span>Products</span></h1>
-            <p>Discover our top-rated products, handpicked for quality and style. These customer favorites are perfect for any occasion!</p>
+            <p class="card-price">$500.00</p>
+            <button class="btn-cart">Add to Cart</button>
         </div>
 
-        <!-- CART -->
-        <div class="card-container">
-         <div class="card">
-            <div>
-                <img src="bu1.jpg" alt="Card Icon">
+        <div class="card">
+            <span class="badge">20% off</span>
+            <div class="card-img">
+                <img src="assets/images/bu8.jpg" alt="New Arrival Item">
             </div>
-                <h1>Blossom Luxe Headband</h1>
-                 <p>for the floral headband.</p>
-                <span>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                </span>
-                <p>$500.00</p>
-                <button>Add to Cart</button>
-         </div>
-         <div class="card">
-            <div>
-                <img src="bu2.jpg" alt="Card Icon">
+            <h2>Premium Collection</h2>
+            <div class="card-stars">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
             </div>
-                <h1>Urban Chic Denim Jacket </h1>
-                 <p>for the denim jacket.</p>
-                <span>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                </span>
-                <p>$500.00</p>
-                <button>Add to Cart</button>
-         </div>
-         <div class="card">
-            <div>
-                <img src="bu3.jpg" alt="Card Icon">
+            <p class="card-price">$450.00</p>
+            <button class="btn-cart">Add to Cart</button>
+        </div>
+
+    </div>
+</section>
+
+<!-- ===== POPULAR PRODUCTS ===== -->
+<section class="latest" id="popular-products">
+    <div class="product-intro">
+        <h1>Popular <span>Products</span></h1>
+        <p>Discover our top-rated products, handpicked for quality and style. These customer favorites are perfect for any occasion!</p>
+    </div>
+
+    <div class="card-container">
+
+        <div class="card">
+            <span class="badge">20% off</span>
+            <div class="card-img">
+                <img src="assets/images/bu1.jpg" alt="Blossom Luxe Headband">
             </div>
-                <h1>GlowSoft Hand Cream </h1>
-                 <p>for the hand cream.</p>
-                <span>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                </span>
-                <p>$500.00</p>
-                <button>Add to Cart</button>
-         </div>
-         <div class="card">
-            <div>
-                <img src="bu4.jpg" alt="Card Icon">
+            <h2>Blossom Luxe Headband</h2>
+            <p class="card-desc">Elegant floral headband</p>
+            <div class="card-stars">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
             </div>
-                <h1>Glam Essentials Makeup Kit </h1>
-                 <p>for the makeup items.</p>
-                <span>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                </span>
-                <p>$500.00</p>
-                <button>Add to Cart</button>
-         </div>
+            <p class="card-price">$25.00</p>
+            <button class="btn-cart">Add to Cart</button>
         </div>
-     </section>
 
-     <!-- Trends -->
+        <div class="card">
+            <span class="badge">20% off</span>
+            <div class="card-img">
+                <img src="assets/images/bu2.jpg" alt="Urban Chic Denim Jacket">
+            </div>
+            <h2>Urban Chic Denim Jacket</h2>
+            <p class="card-desc">Stylish everyday denim</p>
+            <div class="card-stars">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+            </div>
+            <p class="card-price">$120.00</p>
+            <button class="btn-cart">Add to Cart</button>
+        </div>
 
-     <section class="trends">
-        <div class="product-intro">
-            <h1>Top <span>Trends</span></h1>
-            <p>Stay ahead with the latest must-haves and trending styles.</p>
+        <div class="card">
+            <span class="badge">20% off</span>
+            <div class="card-img">
+                <img src="assets/images/bu3.jpg" alt="GlowSoft Hand Cream">
+            </div>
+            <h2>GlowSoft Hand Cream</h2>
+            <p class="card-desc">Nourishing daily moisturizer</p>
+            <div class="card-stars">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+            </div>
+            <p class="card-price">$18.00</p>
+            <button class="btn-cart">Add to Cart</button>
         </div>
-        <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <img src="headphone1.png" />
-              </div>
-              <div class="swiper-slide">
-                <img src="headphone2.png" />
-              </div>
-              <div class="swiper-slide">
-                <img src="headphone3.png" />
-              </div>
-              <div class="swiper-slide">
-                <img src="headphone1.png" />
-              </div>
-              <div class="swiper-pagination"></div>
-  </div>
-     </section>
 
-     <footer>
-        <div>
-            <h1>YSF<span>Cart</span></h1>
-            <p><br>
-                Everything for Kids World
-            </p>
+        <div class="card">
+            <span class="badge">20% off</span>
+            <div class="card-img">
+                <img src="assets/images/bu4.jpg" alt="Glam Essentials Makeup Kit">
+            </div>
+            <h2>Glam Essentials Kit</h2>
+            <p class="card-desc">Complete makeup collection</p>
+            <div class="card-stars">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+            </div>
+            <p class="card-price">$85.00</p>
+            <button class="btn-cart">Add to Cart</button>
         </div>
-        <div>
-            <i class="fa fa-facebook"></i>
-            <i class="fa fa-instagram"></i>
-            <i class="fa fa-whatsapp"></i>
-            <i class="fa fa-twitter"></i>
-            <i class="fa fa-pinterest"></i>
-            <p><br>Designed by Md Yusuf </p>
-        </div>
-        <div>
-            <p>
-                Copyright &#169;2024 All Rights Reserved
-            </p>
-        </div>
-     </footer>
 
+    </div>
+</section>
+
+<!-- ===== TRENDS / SWIPER ===== -->
+<section class="trends" id="top-trends">
+    <div class="product-intro">
+        <h1>Top <span>Trends</span></h1>
+        <p>Stay ahead with the latest must-haves and trending styles.</p>
+    </div>
+
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="assets/images/headphone1.png" alt="Trending Headphones - Model 1">
+            </div>
+            <div class="swiper-slide">
+                <img src="assets/images/headphone2.png" alt="Trending Headphones - Model 2">
+            </div>
+            <div class="swiper-slide">
+                <img src="assets/images/headphone3.png" alt="Trending Headphones - Model 3">
+            </div>
+            <div class="swiper-slide">
+                <img src="assets/images/headphone1.png" alt="Trending Headphones - Model 4">
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+    <div class="footer-col">
+        <h2>YSF<span>Cart</span></h2>
+        <p>Everything for New World.<br>Quality products for every lifestyle.</p>
+    </div>
+
+    <div class="footer-col">
+        <div class="social-icons">
+            <i class="fa fa-facebook" title="Facebook"></i>
+            <i class="fa fa-instagram" title="Instagram"></i>
+            <i class="fa fa-whatsapp" title="WhatsApp"></i>
+            <i class="fa fa-twitter" title="Twitter"></i>
+            <i class="fa fa-pinterest" title="Pinterest"></i>
+        </div>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="pages/shop.html">Shop</a>
+            <a href="pages/contact.html">Contact Us</a>
+            <a href="pages/login.html">Login</a>
+            <a href="pages/register.html">Register</a>
+        </div>
+        <p style="margin-top:10px;">Designed by Md Yusuf</p>
+    </div>
+
+    <div class="footer-col">
+        <p>
+            <i class="fa fa-phone"></i> +91 101 189 035<br>
+            <i class="fa fa-envelope"></i> ecmrs098@ecom.ac.in
+        </p>
+    </div>
+
+    <div class="footer-bottom">
+        <p>Copyright &copy; 2024 YSFCart. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<!-- ===== SCRIPTS ===== -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script>
-    var swiper = new Swiper(".mySwiper", {
-      effect: "coverflow",
-      grabCursor: true,
-      centeredSlides: true,
-      slidesPerView: "auto",
-      coverflowEffect: {
-        rotate: 50,
-        stretch: 0,
-        depth: 1200,
-        modifier: 1,
-        slideShadows: false,
-      },
-      pagination: {
-        el: ".swiper-pagination",
-      },
-    });
-  </script>
-
-<script>
-    var sidenav = document.getElementById('sidenav');
-    var menubar = document.getElementById('menubar');
-    sidenav.style.width = "0px";
-    menubar.onclick = function() {
-        if (sidenav.style.width == "0px") {
-            sidenav.style.width = "250px";
-        } else {
-            sidenav.style.width = "0px";
-        }
-    }
-</script>
+<script src="assets/js/main.js"></script>
 
 </body>
-</html> 
+</html>

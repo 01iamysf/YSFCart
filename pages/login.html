@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Login to your YSFCart account to manage orders, wishlist, and more.">
+    <title>Login — YSFCart</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/mediaquery.css">
+</head>
+<body>
+
+<!-- ===== TOPBAR ===== -->
+<nav class="nav1">
+    <div class="left">
+        <span>Welcome to YSFCart</span>
+        <a href="register.html">Register</a> OR
+        <a href="login.html">Login</a>
+    </div>
+    <div class="right">
+        <i class="fa fa-facebook"></i>
+        <i class="fa fa-instagram"></i>
+        <i class="fa fa-whatsapp"></i>
+        <i class="fa fa-twitter"></i>
+        <i class="fa fa-pinterest"></i>
+    </div>
+</nav>
+
+<!-- ===== BRAND BAR ===== -->
+<nav class="nav2">
+    <div class="nav2-left">
+        <i class="fa fa-phone"></i> +91 101 189 035
+        &nbsp;&nbsp;<i class="fa fa-envelope"></i> ecmrs098@ecom.ac.in
+    </div>
+    <div class="nav2-center">
+        <a href="../index.html">
+            <h1>YSF<span>Cart</span></h1>
+        </a>
+        <p>Everything for New World</p>
+    </div>
+    <div class="nav2-right">
+        <a href="contact.html"><i class="fa fa-map"></i> Contact Us</a>
+        &nbsp;&nbsp;
+        <a href="cart.html" style="position:relative;">
+            <i class="fa fa-shopping-cart"></i> Cart
+            <span id="cart-count" style="display:none;position:absolute;top:-8px;right:-10px;background:red;color:#fff;border-radius:50%;width:18px;height:18px;font-size:0.7rem;line-height:18px;text-align:center;font-weight:700;"></span>
+        </a>
+    </div>
+</nav>
+
+<!-- ===== MAIN NAV ===== -->
+<nav class="nav3">
+    <ul>
+        <li><a href="../index.html"><i class="fa fa-home"></i> Home</a></li>
+        <li><a href="shop.html?cat=boy"><i class="fa fa-male"></i> Boy</a></li>
+        <li><a href="shop.html?cat=accessories"><i class="fa fa-star"></i> Accessories</a></li>
+        <li>
+            <a href="shop.html?cat=toys"><i class="fa fa-anchor"></i> Toys <i class="fa fa-caret-down"></i></a>
+            <ul>
+                <li><a href="shop.html?cat=wooden"><i class="fa fa-clipboard"></i> Wooden</a></li>
+                <li><a href="shop.html?cat=plastic"><i class="fa fa-circle-o"></i> Plastic</a></li>
+                <li><a href="shop.html?cat=mattel"><i class="fa fa-gavel"></i> Mattel</a></li>
+            </ul>
+        </li>
+        <li><a href="shop.html?cat=special"><i class="fa fa-calendar-check-o"></i> Special</a></li>
+        <li><a href="shop.html"><i class="fa fa-search"></i> All Products</a></li>
+    </ul>
+</nav>
+
+<i class="fa fa-bars" id="menubar"></i>
+<div id="sidenav-overlay"></div>
+<section id="sidenav">
+    <ul>
+        <li><a href="../index.html"><i class="fa fa-home"></i> Home</a></li>
+        <li><a href="shop.html"><i class="fa fa-search"></i> All Products</a></li>
+        <li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+        <li><a href="contact.html"><i class="fa fa-map"></i> Contact</a></li>
+        <li><a href="login.html"><i class="fa fa-sign-in"></i> Login</a></li>
+        <li><a href="register.html"><i class="fa fa-user-plus"></i> Register</a></li>
+    </ul>
+</section>
+
+<!-- ===== LOGIN FORM ===== -->
+<div class="auth-wrapper">
+    <div class="auth-card">
+        <h2>Welcome Back</h2>
+        <p class="auth-subtitle">Sign in to your YSFCart account</p>
+
+        <form id="login-form" novalidate>
+            <div class="form-group">
+                <label for="login-email">Email Address</label>
+                <input type="email" id="login-email" name="email" placeholder="you@example.com" required>
+            </div>
+            <div class="form-group">
+                <label for="login-password">Password</label>
+                <input type="password" id="login-password" name="password" placeholder="Enter your password" required>
+            </div>
+            <button type="submit" class="btn-primary">Sign In</button>
+        </form>
+
+        <p class="auth-switch">
+            Don't have an account? <a href="register.html">Register now</a>
+        </p>
+    </div>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+    <div class="footer-col">
+        <h2>YSF<span>Cart</span></h2>
+        <p>Everything for New World.</p>
+    </div>
+    <div class="footer-col">
+        <div class="social-icons">
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-whatsapp"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-pinterest"></i>
+        </div>
+        <div class="footer-links">
+            <a href="../index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+        <p style="margin-top:10px;">Designed by Md Yusuf</p>
+    </div>
+    <div class="footer-col">
+        <p><i class="fa fa-phone"></i> +91 101 189 035<br>
+           <i class="fa fa-envelope"></i> ecmrs098@ecom.ac.in</p>
+    </div>
+    <div class="footer-bottom">
+        <p>Copyright &copy; 2024 YSFCart. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+</body>
+</html>
