@@ -2,7 +2,7 @@
 
 YSFCart is a responsive e-commerce website built with HTML, CSS, and JavaScript.
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 YSFCart/
@@ -23,7 +23,7 @@ YSFCart/
 └── README.md
 ```
 
-## 🚀 Features
+##  Features
 
 - Responsive design (mobile, tablet, desktop)
 - Mobile hamburger sidenav with smooth animation
@@ -34,7 +34,7 @@ YSFCart/
 - Contact form with success feedback
 - SEO-friendly meta tags on all pages
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 - **HTML5** — Semantic markup
 - **CSS3** — Custom properties, Flexbox, Grid
