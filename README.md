@@ -1,6 +1,7 @@
 # YSFCart 🛒
 
-A simple responsive e-commerce website built with HTML, CSS & JavaScript.
+A fully responsive e-commerce web app built from scratch  using HTML, CSS & JavaScript. 
+Developed in 2024 as a self-practice frontend project featuring product listing, cart functionality, and a clean modern UI.
 
 🌐 **Live Site:** [https://01iamysf.github.io/YSFCart/](https://01iamysf.github.io/YSFCart/)
 
